@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import '../src/index.css';
-import { Footer, MainSection, OtherCitiesSection, Minipanel, FindForm } from './components';
+import { Footer, MainSection, Minipanel, FindForm } from './components';
 import axios from 'axios';
 import { CurrentWeather } from './components/type interfaces/weather_interface';
 import { city_info,  } from './components/type interfaces/city';
@@ -9,7 +9,7 @@ import { MapStats } from './components/Map/Map';
 import Arrow from './components/icons/arrow';
 
 function App() {
-    const [city, setCity] = useState<string[]>(['Warsaw', 'Poland']);
+    const [city, setCity] = useState<string[]>(['Gorakhpur', 'Uttar Pradesh']);
     const [inputvalue, SetInputvalue] = useState<string>(city[0]);
     const [weather, setWeather] = useState<CurrentWeather>();
     const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -163,7 +163,7 @@ function App() {
     </div><br/>
     <div className="bg-slate-900 bg-opacity-70 h-full  tablet:h-fit"> 
        <div className='w-full py-2 h-2 bg-slate-700'> </div>
-       <OtherCitiesSection/>
+      
        <div className='w-full h-2 bg-slate-700'> </div>
    </div>
   
